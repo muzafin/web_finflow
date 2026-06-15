@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FinFlow – Master Your Money with Voice-First Tracking</title>
+  <meta name="description" content="Record expenses in 3 seconds with voice. FinFlow is the modern personal finance app that makes tracking money effortless. Free to download." />
+  <meta property="og:title" content="FinFlow – Master Your Money" />
+  <meta property="og:description" content="The fastest way to track expenses. Just speak naturally and FinFlow's AI handles the rest." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ===== NAV ===== -->
+  <header id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-icon">
+          <span class="logo-letter">F</span>
+        </div>
+        <span class="logo-text">FinFlow</span>
+      </a>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="#how-it-works">How it Works</a>
+        <a href="#features">Features</a>
+        <a href="#download">Download</a>
+        <a href="#reviews">Reviews</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#download" class="btn btn-primary btn-sm">Download App</a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Nav Overlay -->
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#how-it-works" onclick="closeNav()">How it Works</a>
+    <a href="#features" onclick="closeNav()">Features</a>
+    <a href="#download" onclick="closeNav()">Download</a>
+    <a href="#reviews" onclick="closeNav()">Reviews</a>
+  </div>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-blob hero-blob-1"></div>
+    <div class="hero-bg-blob hero-blob-2"></div>
+
+    <div class="hero-inner">
+      <!-- Text Side -->
+      <div class="hero-text reveal">
+        <span class="badge">
+          <span class="material-symbols-outlined" style="font-size:14px;font-variation-settings:'FILL' 1">mic</span>
+          Voice-First Finance Tracking
+        </span>
+
+        <h1>Master Your Money with <span class="hero-highlight">Voice-First</span> Tracking</h1>
+
+        <p class="hero-sub">
+          Record expenses in 3 seconds. Just speak naturally — <em>"spent 50k for lunch at cafe"</em> — and FinFlow handles the rest.
+        </p>
+
+        <div class="hero-cta">
+          <a href="#download" class="btn btn-primary btn-lg">
+            Download Free
+            <span class="material-symbols-outlined">arrow_downward</span>
+          </a>
+          <a href="#how-it-works" class="btn btn-glass btn-lg">
+            <span class="material-symbols-outlined">play_circle</span>
+            See How it Works
+          </a>
+        </div>
+
+        <div class="hero-social-proof">
+          <div class="avatar-group">
+            <div class="avatar" style="background:var(--primary-container);color:var(--primary)">JB</div>
+            <div class="avatar" style="background:#d8e2ff;color:#1e5bba">AL</div>
+            <div class="avatar" style="background:#ffddb4;color:#805200">MK</div>
+            <div class="avatar" style="background:var(--surface-variant);color:var(--on-surface-variant)">+</div>
+          </div>
+          <div class="proof-text">
+            <div class="stars">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            </div>
+            <span>Trusted by 5,000+ users worldwide</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Phone Mockup -->
+      <div class="hero-mockup reveal reveal-delay-1">
+        <div class="phone-glow"></div>
+        <div class="phone-frame">
+          <!-- Status bar -->
+          <div class="phone-status-bar">
+            <span>9:41</span>
+            <div class="status-icons">
+              <span class="material-symbols-outlined" style="font-size:14px">signal_cellular_alt</span>
+              <span class="material-symbols-outlined" style="font-size:14px">battery_full</span>
+            </div>
+          </div>
+
+          <!-- App Header -->
+          <div class="app-header">
+            <div>
+              <p class="app-label">~ Hi, there! 👋</p>
+              <h3 class="app-balance">$1,830.43</h3>
+              <p class="app-label" style="font-size:11px;margin-top:2px;opacity:.7">Total Balance (USD)</p>
+            </div>
+            <div class="app-avatar">F</div>
+          </div>
+
+          <!-- Income / Expense chips -->
+          <div class="income-expense-row">
+            <div class="ie-chip">
+              <div class="ie-icon income-icon">
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;font-size:16px">arrow_downward</span>
+              </div>
+              <div>
+                <p class="ie-label">Income</p>
+                <p class="ie-amount" style="color:var(--income)">$2,500.00</p>
+              </div>
+            </div>
+            <div class="ie-chip">
+              <div class="ie-icon expense-icon">
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;font-size:16px">arrow_upward</span>
+              </div>
+              <div>
+                <p class="ie-label">Expense</p>
+                <p class="ie-amount" style="color:var(--expense)">$669.57</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Transactions -->
+          <div class="app-transactions">
+            <p class="section-label">Recent Transactions</p>
+            <div class="tx-list">
+              <div class="tx-item tx-animate" style="animation-delay:0.1s">
+                <div class="tx-icon" style="background:rgba(245,166,35,.15);color:#F5A623">
+                  <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;font-size:18px">restaurant</span>
+                </div>
+                <div class="tx-info">
+                  <p class="tx-name">Dinner</p>
+                  <p class="tx-meta">Food · Today</p>
+                </div>
+                <span class="tx-amount expense">-$15.00</span>
+              </div>
+              <div class="tx-item tx-animate" style="animation-delay:0.2s">
+                <div class="tx-icon" style="background:rgba(91,141,239,.15);color:#5B8DEF">
+                  <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;font-size:18px">directions_car</span>
+                </div>
+                <div class="tx-info">
+                  <p class="tx-name">Grab</p>
+                  <p class="tx-meta">Transport · Yesterday</p>
+                </div>
+                <span class="tx-amount expense">-Rp 25k</span>
+              </div>
+              <div class="tx-item tx-animate" style="animation-delay:0.3s">
+                <div class="tx-icon" style="background:rgba(45,155,111,.15);color:var(--income)">
+                  <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;font-size:18px">payments</span>
+                </div>
+                <div class="tx-info">
+                  <p class="tx-name">Salary</p>
+                  <p class="tx-meta">Income · Jun 1</p>
+                </div>
+                <span class="tx-amount income">+$2,500</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Bottom Nav -->
+          <div class="app-bottom-nav">
+            <div class="bnav-item active">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">home</span>
+            </div>
+            <div class="bnav-item">
+              <span class="material-symbols-outlined">bar_chart</span>
+            </div>
+            <div class="bnav-fab">
+              <span class="material-symbols-outlined">add</span>
+            </div>
+            <div class="bnav-item">
+              <span class="material-symbols-outlined">account_balance_wallet</span>
+            </div>
+            <div class="bnav-item">
+              <span class="material-symbols-outlined">person</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Floating cards -->
+        <div class="float-card float-card-1 reveal reveal-delay-2">
+          <span class="material-symbols-outlined" style="color:var(--primary);font-variation-settings:'FILL' 1">mic</span>
+          <div>
+            <p style="font-size:11px;font-weight:600;color:var(--on-surface)">Voice Recorded</p>
+            <p style="font-size:10px;color:var(--on-surface-variant)">3 seconds ✓</p>
+          </div>
+        </div>
+
+        <div class="float-card float-card-2 reveal reveal-delay-3">
+          <div class="mini-chart">
+            <div class="bar" style="height:40%;background:var(--income)"></div>
+            <div class="bar" style="height:70%;background:var(--primary)"></div>
+            <div class="bar" style="height:55%;background:var(--income)"></div>
+            <div class="bar" style="height:90%;background:var(--primary)"></div>
+            <div class="bar" style="height:65%;background:var(--income)"></div>
+          </div>
+          <div>
+            <p style="font-size:11px;font-weight:600;color:var(--on-surface)">Savings Up</p>
+            <p style="font-size:10px;color:var(--income)">+24% this month</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== HOW IT WORKS / VOICE ===== -->
+  <section class="section voice-section" id="how-it-works">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">Voice Quick Record</span>
+        <h2>The fastest way to track expenses</h2>
+        <p>Just speak naturally in your language, and FinFlow's AI instantly understands amount, category, and details.</p>
+      </div>
+
+      <div class="voice-grid">
+        <div class="voice-visual reveal">
+          <div class="voice-bg-blob"></div>
+          <img
+            src="https://lh3.googleusercontent.com/aida/AP1WRLtM2ZF_gAWs8iT3_OnUDr4tGE1KKjgMKfKb47MGEP_Ijgx_0R-v30o5y_edF7tTtsHYUb5PTo2Bs7o9smPwSTiOK0bRByvz36FT75UYSeSYU_BfPS1qQ-IoBphDWPgxBGtJW-_r6gdUEaLlL-WpDe5oBLDSwXScthuRDOqKcUem3geDlG-UZfTsGIk8i5XgdyoRWPWZtcng8hIrqGP4JDVJgLKQvpp9DDLpPXfcKuIjSDL_2P5RD7_PaGLs"
+            alt="Voice recording illustration"
+            class="voice-img"
+          />
+          <!-- Pulse rings -->
+          <div class="pulse-ring ring-1"></div>
+          <div class="pulse-ring ring-2"></div>
+        </div>
+
+        <div class="voice-cards reveal reveal-delay-1">
+          <div class="voice-card voice-card-en">
+            <p class="voice-lang">🇺🇸 English</p>
+            <p class="voice-quote">"Coffee at Starbucks $5"</p>
+            <div class="voice-result">
+              <div class="vr-icon" style="background:rgba(245,166,35,.2);color:#F5A623">
+                <span class="material-symbols-outlined" style="font-size:16px">local_cafe</span>
+              </div>
+              <span class="vr-name">Coffee · Food</span>
+              <span class="vr-amount" style="color:var(--expense)">-$5.00</span>
+            </div>
+          </div>
+
+          <div class="voice-card voice-card-id">
+            <p class="voice-lang">🇮🇩 Indonesian</p>
+            <p class="voice-quote">"Bayar grab 25 ribu"</p>
+            <div class="voice-result">
+              <div class="vr-icon" style="background:rgba(91,141,239,.2);color:#5B8DEF">
+                <span class="material-symbols-outlined" style="font-size:16px">directions_car</span>
+              </div>
+              <span class="vr-name">Transport · Grab</span>
+              <span class="vr-amount" style="color:var(--expense)">-Rp 25.000</span>
+            </div>
+          </div>
+
+          <div class="voice-stats">
+            <div class="stat-box">
+              <p class="stat-num" style="color:var(--primary)">3s</p>
+              <p class="stat-desc">Avg. record time</p>
+            </div>
+            <div class="stat-box">
+              <p class="stat-num" style="color:var(--secondary)">95%</p>
+              <p class="stat-desc">Accuracy rate</p>
+            </div>
+            <div class="stat-box">
+              <p class="stat-num" style="color:#805200">7+</p>
+              <p class="stat-desc">Languages</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FEATURES BENTO ===== -->
+  <section class="section features-section" id="features">
+    <div class="container">
+      <div class="section-header reveal">
+        <h2>Everything you need to master your finances</h2>
+        <p>Powerful features designed with simplicity in mind. Track, analyze, and optimize your spending effortlessly.</p>
+      </div>
+
+      <div class="bento-grid">
+        <!-- Smart Transactions (wide) -->
+        <div class="bento-card bento-wide bento-smart reveal">
+          <div class="bento-glow" style="background:radial-gradient(circle,rgba(0,105,71,.15),transparent 70%)"></div>
+          <div class="bento-content">
+            <div>
+              <div class="feature-icon-wrap" style="background:rgba(0,105,71,.1);color:var(--primary)">
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">receipt_long</span>
+              </div>
+              <h3>Smart Transactions</h3>
+              <p>Track income, expenses, and transfers with powerful categorization and search. Auto-categorizes with AI.</p>
+            </div>
+          </div>
+          <img
+            src="https://lh3.googleusercontent.com/aida/AP1WRLva8_YyGUjZYps5xCADsRYB-z0An5yJiGKytNJUjXWPI-rARNWle00Y6Sq0t2q7azWGuwCUzmFbklFFBEmz5IF4rV1sIX1JAPNwwsBqjiBleh0Ew9PzBUmit90Hx1MprRIbGWih8QVykI6KUCqSndxuo7X-OmwUI6XON2D-4KReNnO6LDgJz4YVXtIzct9D-5N0OW226tARwujJWTF79RuGM2HzOk4vbSkuCn3gkrOnLuR1D9pyPcr_lRE"
+            alt="Credit cards"
+            class="bento-img bento-img-smart"
+          />
+        </div>
+
+        <!-- Deep Insights -->
+        <div class="bento-card bento-insights reveal reveal-delay-1">
+          <div class="bento-glow" style="background:radial-gradient(circle at top left,rgba(30,91,186,.15),transparent 70%)"></div>
+          <img
+            src="https://lh3.googleusercontent.com/aida/AP1WRLs9LZxErn-ITxPL1PBJYyRxhQ2niRr_V4iETspKJiubbQcqbkhq0Nr1svhoJlz4bBK8uV8HRuDpF3h2fVc1EMeDL5MCN7qoAAjn1IrAWhcOnHZWqWB8YL8VPztnCZgiCQ-vB42NTLd0MMt8HFWOOvrtX1BtQDY7QTVMDTKvfKO8KwXsE6EpQbOzxCBiThAa3OeyiakWvzbaIFz7nrrgZUValr3zChSXsFmvgD6xww9otpRbSHgfT6J84Teq"
+            alt="Pie chart"
+            class="bento-img-center"
+          />
+          <div class="bento-content bento-center">
+            <div class="feature-icon-wrap" style="background:rgba(30,91,186,.1);color:var(--secondary)">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">bar_chart</span>
+            </div>
+            <h3>Deep Insights</h3>
+            <p>Beautiful charts and spending pattern analysis to understand where your money goes.</p>
+          </div>
+        </div>
+
+        <!-- Total Control -->
+        <div class="bento-card bento-control reveal reveal-delay-2">
+          <div class="bento-glow" style="background:radial-gradient(circle at bottom left,rgba(128,82,0,.12),transparent 70%)"></div>
+          <img
+            src="https://lh3.googleusercontent.com/aida/AP1WRLvn8AjYAbvFvoMVdmXYVlpbw4qEWwzFdaHtkIwVN0uDIi1-LwLq_XqLqhPZOYxMDxJsn6Ru9MM1MORkVtnMvDldM4x2h1e0b51KeWhbushlycy6hWf4KCrXs3EWatmxspdyJs1x5UuWePMSzD7TPo1r53ADICbCR583r91nSE2mukvv7qA16HbD4pPGj5ona-6DZ3wHjpQ_myw6xk1zJo4YBirt9eJK1v-VrdfyPwU95ptJil_yR4ocSUns"
+            alt="Wallet"
+            class="bento-img-center"
+          />
+          <div class="bento-content bento-center">
+            <div class="feature-icon-wrap" style="background:rgba(128,82,0,.1);color:#805200">
+              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">account_balance_wallet</span>
+            </div>
+            <h3>Total Control</h3>
+            <p>Manage cash, bank accounts, and wallets in one beautiful place.</p>
+          </div>
+        </div>
+
+        <!-- Privacy First (wide, dark) -->
+        <div class="bento-card bento-wide bento-privacy reveal">
+          <div class="bento-privacy-inner">
+            <div>
+              <div class="feature-icon-wrap" style="background:rgba(255,255,255,.12);color:var(--inverse-primary)">
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">security</span>
+              </div>
+              <h3>Privacy First &amp; Offline</h3>
+              <p>Your data stays on your device. No cloud uploads, no tracking. Works completely offline when you need it most.</p>
+            </div>
+          </div>
+          <div class="lock-ring">
+            <span class="material-symbols-outlined lock-icon">lock</span>
+            <svg class="lock-svg rotate-anim" viewBox="0 0 100 100">
+              <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="10 5"/>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== STATS ===== -->
+  <section class="section stats-section">
+    <div class="container">
+      <div class="stats-grid reveal">
+        <div class="stats-card">
+          <p class="stats-num">5K+</p>
+          <p class="stats-label">Active Users</p>
+        </div>
+        <div class="stats-divider"></div>
+        <div class="stats-card">
+          <p class="stats-num">3s</p>
+          <p class="stats-label">To Record</p>
+        </div>
+        <div class="stats-divider"></div>
+        <div class="stats-card">
+          <p class="stats-num">95%</p>
+          <p class="stats-label">AI Accuracy</p>
+        </div>
+        <div class="stats-divider"></div>
+        <div class="stats-card">
+          <p class="stats-num">7+</p>
+          <p class="stats-label">Languages</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== REVIEWS ===== -->
+  <section class="section reviews-section" id="reviews">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-eyebrow">User Reviews</span>
+        <h2>Loved by thousands worldwide</h2>
+      </div>
+      <div class="reviews-grid">
+        <div class="review-card reveal">
+          <div class="review-stars">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          </div>
+          <p class="review-text">"FinFlow changed how I think about spending. The voice feature is like magic — I just say it and it's logged. Best finance app I've ever used."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background:var(--primary-container);color:var(--primary)">JB</div>
+            <div>
+              <p class="reviewer-name">Jessica B.</p>
+              <p class="reviewer-role">Freelance Designer</p>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal reveal-delay-1">
+          <div class="review-stars">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          </div>
+          <p class="review-text">"Akhirnya ada app keuangan yang bisa rekam dengan suara bahasa Indonesia! Super cepat dan akurat. Sangat membantu buat ngontrol pengeluaran."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background:#d8e2ff;color:#1e5bba">AL</div>
+            <div>
+              <p class="reviewer-name">Andi L.</p>
+              <p class="reviewer-role">Entrepreneur, Jakarta</p>
+            </div>
+          </div>
+        </div>
+        <div class="review-card reveal reveal-delay-2">
+          <div class="review-stars">
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+            <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
+          </div>
+          <p class="review-text">"The privacy-first approach sold me. My financial data never leaves my phone, and the offline functionality is flawless. Highly recommend."</p>
+          <div class="reviewer">
+            <div class="reviewer-avatar" style="background:#ffddb4;color:#805200">MK</div>
+            <div>
+              <p class="reviewer-name">Maya K.</p>
+              <p class="reviewer-role">Software Engineer</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== DOWNLOAD ===== -->
+  <section class="section download-section" id="download">
+    <div class="download-bg-blob dl-blob-1"></div>
+    <div class="download-bg-blob dl-blob-2"></div>
+    <div class="container">
+      <div class="download-inner reveal">
+        <div class="download-logo">
+          <div class="dl-logo-icon">F</div>
+        </div>
+        <h2>Ready to take control of<br/>your finances?</h2>
+        <p>Join thousands of users building better money habits with FinFlow.<br/>Free to download. Powerful to use.</p>
+
+        <div class="download-btns">
+          <a href="#" class="store-btn" id="androidBtn">
+            <span class="material-symbols-outlined store-icon">android</span>
+            <div class="store-text">
+              <span class="store-sub">Coming soon on</span>
+              <span class="store-main">Google Play</span>
+            </div>
+          </a>
+          <a href="finflow.apk" download="FinFlow.apk" class="store-btn store-btn-primary" id="apkBtn">
+            <span class="material-symbols-outlined store-icon">download</span>
+            <div class="store-text">
+              <span class="store-sub">Direct Download · ~58 MB</span>
+              <span class="store-main">Download APK</span>
+            </div>
+          </a>
+        </div>
+
+        <p class="download-note">
+          <span class="material-symbols-outlined" style="font-size:14px;vertical-align:middle">security</span>
+          Free to download · No subscription required · Works offline
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-icon">
+              <span class="logo-letter">F</span>
+            </div>
+            <span class="logo-text">FinFlow</span>
+          </div>
+          <p>Track Smart, Spend Wise, Live Better.<br/>The modern personal finance app.</p>
+          <div class="social-links">
+            <a href="#" class="social-icon" aria-label="Twitter">
+              <span class="material-symbols-outlined">language</span>
+            </a>
+            <a href="#" class="social-icon" aria-label="GitHub">
+              <span class="material-symbols-outlined">code</span>
+            </a>
+            <a href="#" class="social-icon" aria-label="Email">
+              <span class="material-symbols-outlined">mail</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#features">Features</a>
+          <a href="#how-it-works">How it Works</a>
+          <a href="#download">Download</a>
+        </div>
+        <div class="footer-col">
+          <h4>Company</h4>
+          <a href="#">About Us</a>
+          <a href="#">Blog</a>
+          <a href="#">Contact Us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <p class="footer-copy">© 2025 FinFlow.<br/>Master Your Money with clarity.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="main.js"></script>
+</body>
+</html>
