@@ -128,7 +128,7 @@ const sectionObserver = new IntersectionObserver(
 sections.forEach((s) => sectionObserver.observe(s));
 
 // ---- Dynamic User Count ----
-let currentDownloads = parseInt(localStorage.getItem('finflow_downloads')) || 5000;
+let currentDownloads = parseInt(localStorage.getItem('finflow_downloads_count')) || 0;
 
 function updateDownloadUI() {
   const trustedEl = document.getElementById('trustedUsersCount');
@@ -155,8 +155,8 @@ apkBtn.href     = APK_URL;
 apkBtn.download = 'FinFlow.apk'; // nama file saat didownload
 apkBtn.addEventListener('click', () => {
   // Increment download counter
-  currentDownloads += Math.floor(Math.random() * 3) + 1; // Simulate 1-3 downloads per click for fun
-  localStorage.setItem('finflow_downloads', currentDownloads);
+  currentDownloads += 1; // Simulate 1 download per click
+  localStorage.setItem('finflow_downloads_count', currentDownloads);
   updateDownloadUI();
 
   // Tampilkan toast notifikasi saat download dimulai
