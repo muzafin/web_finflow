@@ -10,6 +10,7 @@
   <meta property="og:type" content="website" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="icon" type="image/png" href="https://lh3.googleusercontent.com/aida/AP1WRLvm_f-gPVYWADbnquTKHO1cIbMTlHY5uKEd7vADZ0V6hkB1AW82XoYQn1BhyTIYIqkUHws_CcUXIyqaGrhtEWDHblnTP09ys3G_o2zTBThyKI57KdVS8_7DNJ_gV2DvBLwqGOgu7ervEo_dx7AHnHl-OBf9SsMbZv1_8yiSmIJie4Nu6F12yKNLaLFzb1b28-n0ifPMu4gGYt4hWalzHw0FjLFBQJGvzQRqKRGfCCBL4tGQ898cwCoh2QE" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=DM+Mono:wght@400;500;700&display=swap" rel="stylesheet" />
   <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
@@ -20,9 +21,7 @@
   <header id="navbar">
     <div class="nav-inner">
       <a href="#" class="nav-logo">
-        <div class="logo-icon">
-          <span class="logo-letter">F</span>
-        </div>
+        <img src="https://lh3.googleusercontent.com/aida/AP1WRLvm_f-gPVYWADbnquTKHO1cIbMTlHY5uKEd7vADZ0V6hkB1AW82XoYQn1BhyTIYIqkUHws_CcUXIyqaGrhtEWDHblnTP09ys3G_o2zTBThyKI57KdVS8_7DNJ_gV2DvBLwqGOgu7ervEo_dx7AHnHl-OBf9SsMbZv1_8yiSmIJie4Nu6F12yKNLaLFzb1b28-n0ifPMu4gGYt4hWalzHw0FjLFBQJGvzQRqKRGfCCBL4tGQ898cwCoh2QE" alt="FinFlow Logo" class="logo-icon-img" />
         <span class="logo-text">FinFlow</span>
       </a>
 
@@ -95,7 +94,7 @@
               <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
               <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">star</span>
             </div>
-            <span>Trusted by 5,000+ users worldwide</span>
+            <span>Trusted by <span id="trustedUsersCount">5,000</span>+ users worldwide</span>
           </div>
         </div>
       </div>
@@ -103,103 +102,8 @@
       <!-- Phone Mockup -->
       <div class="hero-mockup reveal reveal-delay-1">
         <div class="phone-glow"></div>
-        <div class="phone-frame">
-          <!-- Status bar -->
-          <div class="phone-status-bar">
-            <span>9:41</span>
-            <div class="status-icons">
-              <span class="material-symbols-outlined" style="font-size:14px">signal_cellular_alt</span>
-              <span class="material-symbols-outlined" style="font-size:14px">battery_full</span>
-            </div>
-          </div>
-
-          <!-- App Header -->
-          <div class="app-header">
-            <div>
-              <p class="app-label">~ Hi, there! 👋</p>
-              <h3 class="app-balance">$1,830.43</h3>
-              <p class="app-label" style="font-size:11px;margin-top:2px;opacity:.7">Total Balance (USD)</p>
-            </div>
-            <div class="app-avatar">F</div>
-          </div>
-
-          <!-- Income / Expense chips -->
-          <div class="income-expense-row">
-            <div class="ie-chip">
-              <div class="ie-icon income-icon">
-                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;font-size:16px">arrow_downward</span>
-              </div>
-              <div>
-                <p class="ie-label">Income</p>
-                <p class="ie-amount" style="color:var(--income)">$2,500.00</p>
-              </div>
-            </div>
-            <div class="ie-chip">
-              <div class="ie-icon expense-icon">
-                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;font-size:16px">arrow_upward</span>
-              </div>
-              <div>
-                <p class="ie-label">Expense</p>
-                <p class="ie-amount" style="color:var(--expense)">$669.57</p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Transactions -->
-          <div class="app-transactions">
-            <p class="section-label">Recent Transactions</p>
-            <div class="tx-list">
-              <div class="tx-item tx-animate" style="animation-delay:0.1s">
-                <div class="tx-icon" style="background:rgba(245,166,35,.15);color:#F5A623">
-                  <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;font-size:18px">restaurant</span>
-                </div>
-                <div class="tx-info">
-                  <p class="tx-name">Dinner</p>
-                  <p class="tx-meta">Food · Today</p>
-                </div>
-                <span class="tx-amount expense">-$15.00</span>
-              </div>
-              <div class="tx-item tx-animate" style="animation-delay:0.2s">
-                <div class="tx-icon" style="background:rgba(91,141,239,.15);color:#5B8DEF">
-                  <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;font-size:18px">directions_car</span>
-                </div>
-                <div class="tx-info">
-                  <p class="tx-name">Grab</p>
-                  <p class="tx-meta">Transport · Yesterday</p>
-                </div>
-                <span class="tx-amount expense">-Rp 25k</span>
-              </div>
-              <div class="tx-item tx-animate" style="animation-delay:0.3s">
-                <div class="tx-icon" style="background:rgba(45,155,111,.15);color:var(--income)">
-                  <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1;font-size:18px">payments</span>
-                </div>
-                <div class="tx-info">
-                  <p class="tx-name">Salary</p>
-                  <p class="tx-meta">Income · Jun 1</p>
-                </div>
-                <span class="tx-amount income">+$2,500</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Bottom Nav -->
-          <div class="app-bottom-nav">
-            <div class="bnav-item active">
-              <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">home</span>
-            </div>
-            <div class="bnav-item">
-              <span class="material-symbols-outlined">bar_chart</span>
-            </div>
-            <div class="bnav-fab">
-              <span class="material-symbols-outlined">add</span>
-            </div>
-            <div class="bnav-item">
-              <span class="material-symbols-outlined">account_balance_wallet</span>
-            </div>
-            <div class="bnav-item">
-              <span class="material-symbols-outlined">person</span>
-            </div>
-          </div>
+        <div class="phone-frame" style="padding:0;background:transparent;border:none;box-shadow:none;">
+          <img src="https://lh3.googleusercontent.com/aida/AP1WRLtR1_QihYDdkQxcVLvyUmAh0bVt8P_pOPzjv0TxCaxEyC0xbBxcPN5XtfFRV4miCbRzCmDW2h_tcqgYDXCSlDo6bE5PoJ8jnXfoG16cDHaaxBrzsc6XXjNSQxAhnkk7XhyAFcGXr75f-zttAq1-hc5YcOtaa1qM_Sjbxff5SfgzuNeOM8oSAtp0NBEk8eW4h5Gk_8INDCAuJDZ3CJaAn2BBX8W2ygXTR2PcrOux16psoIXl-eC2ubO6jsKf" alt="Dashboard FinFlow" style="width:100%; border-radius:36px; box-shadow:0 32px 80px rgba(0,0,0,.18), 0 0 0 2px rgba(255,255,255,.5);" />
         </div>
 
         <!-- Floating cards -->
@@ -356,19 +260,19 @@
           </div>
         </div>
 
-        <!-- Privacy First (wide, dark) -->
+        <!-- Cloud Sync (wide, dark) -->
         <div class="bento-card bento-wide bento-privacy reveal">
           <div class="bento-privacy-inner">
             <div>
               <div class="feature-icon-wrap" style="background:rgba(255,255,255,.12);color:var(--inverse-primary)">
-                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">security</span>
+                <span class="material-symbols-outlined" style="font-variation-settings:'FILL' 1">cloud_sync</span>
               </div>
-              <h3>Privacy First &amp; Offline</h3>
-              <p>Your data stays on your device. No cloud uploads, no tracking. Works completely offline when you need it most.</p>
+              <h3>Cloud Synced via Firebase</h3>
+              <p>Your financial data is securely backed up and synced in real-time across your devices, powered by Google's Firebase infrastructure.</p>
             </div>
           </div>
           <div class="lock-ring">
-            <span class="material-symbols-outlined lock-icon">lock</span>
+            <span class="material-symbols-outlined lock-icon">cloud_done</span>
             <svg class="lock-svg rotate-anim" viewBox="0 0 100 100">
               <circle cx="50" cy="50" r="48" fill="none" stroke="currentColor" stroke-width="2" stroke-dasharray="10 5"/>
             </svg>
@@ -383,7 +287,7 @@
     <div class="container">
       <div class="stats-grid reveal">
         <div class="stats-card">
-          <p class="stats-num">5K+</p>
+          <p class="stats-num" id="statsUsersNum" data-target="5000">5000</p>
           <p class="stats-label">Active Users</p>
         </div>
         <div class="stats-divider"></div>
@@ -498,8 +402,8 @@
         </div>
 
         <p class="download-note">
-          <span class="material-symbols-outlined" style="font-size:14px;vertical-align:middle">security</span>
-          Free to download · No subscription required · Works offline
+          <span class="material-symbols-outlined" style="font-size:14px;vertical-align:middle">cloud_sync</span>
+          Free to download · Cloud synced · Secure
         </p>
       </div>
     </div>
@@ -511,9 +415,7 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <div class="nav-logo">
-            <div class="logo-icon">
-              <span class="logo-letter">F</span>
-            </div>
+            <img src="https://lh3.googleusercontent.com/aida/AP1WRLvm_f-gPVYWADbnquTKHO1cIbMTlHY5uKEd7vADZ0V6hkB1AW82XoYQn1BhyTIYIqkUHws_CcUXIyqaGrhtEWDHblnTP09ys3G_o2zTBThyKI57KdVS8_7DNJ_gV2DvBLwqGOgu7ervEo_dx7AHnHl-OBf9SsMbZv1_8yiSmIJie4Nu6F12yKNLaLFzb1b28-n0ifPMu4gGYt4hWalzHw0FjLFBQJGvzQRqKRGfCCBL4tGQ898cwCoh2QE" alt="FinFlow Logo" class="logo-icon-img" />
             <span class="logo-text">FinFlow</span>
           </div>
           <p>Track Smart, Spend Wise, Live Better.<br/>The modern personal finance app.</p>

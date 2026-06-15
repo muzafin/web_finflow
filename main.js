@@ -127,6 +127,22 @@ const sectionObserver = new IntersectionObserver(
 
 sections.forEach((s) => sectionObserver.observe(s));
 
+// ---- Dynamic User Count ----
+let currentDownloads = parseInt(localStorage.getItem('finflow_downloads')) || 5000;
+
+function updateDownloadUI() {
+  const trustedEl = document.getElementById('trustedUsersCount');
+  if (trustedEl) trustedEl.textContent = currentDownloads.toLocaleString();
+  
+  const statsNumEl = document.getElementById('statsUsersNum');
+  if (statsNumEl && !statsNumEl.dataset.animating) {
+    statsNumEl.textContent = currentDownloads.toLocaleString();
+  }
+}
+
+// Initialize on load
+updateDownloadUI();
+
 // ---- Download button: link to APK / Play Store ----
 const PLAY_STORE_URL = '#'; // Ganti dengan link Google Play Store kamu
 const APK_URL        = 'finflow.apk'; // APK langsung dari repo
@@ -138,6 +154,11 @@ const apkBtn = document.getElementById('apkBtn');
 apkBtn.href     = APK_URL;
 apkBtn.download = 'FinFlow.apk'; // nama file saat didownload
 apkBtn.addEventListener('click', () => {
+  // Increment download counter
+  currentDownloads += Math.floor(Math.random() * 3) + 1; // Simulate 1-3 downloads per click for fun
+  localStorage.setItem('finflow_downloads', currentDownloads);
+  updateDownloadUI();
+
   // Tampilkan toast notifikasi saat download dimulai
   showToast('⬇️ Downloading FinFlow.apk...');
 });
@@ -162,7 +183,7 @@ function animateCounter(el, target, suffix = '', duration = 1600) {
 // Observe stats section to trigger counters
 const statsNums = document.querySelectorAll('.stats-num');
 const statsData = [
-  { value: 5000, suffix: '+', display: '5K+' },
+  { value: currentDownloads, suffix: '', display: 'dynamic' },
   { value: 3,    suffix: 's', display: '3s'  },
   { value: 95,   suffix: '%', display: '95%' },
   { value: 7,    suffix: '+', display: '7+'  },
@@ -174,8 +195,11 @@ const statsObserver = new IntersectionObserver(
       statsNums.forEach((el, i) => {
         const data = statsData[i];
         if (data) {
-          // For "5K+" show 0-5 then append K+
-          if (data.display === '5K+') {
+          if (data.display === 'dynamic') {
+            el.dataset.animating = "true";
+            animateCounter(el, currentDownloads, '');
+            setTimeout(() => { delete el.dataset.animating; el.textContent = currentDownloads.toLocaleString(); }, 1600);
+          } else if (data.display === '5K+') {
             animateCounter(el, 5, 'K+');
           } else {
             animateCounter(el, data.value, data.suffix);

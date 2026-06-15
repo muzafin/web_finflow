@@ -194,21 +194,12 @@ img { max-width: 100%; display: block; }
   text-decoration: none;
   flex-shrink: 0;
 }
-.logo-icon {
+.logo-icon-img {
   width: 36px;
   height: 36px;
   border-radius: 10px;
-  background: linear-gradient(135deg, var(--primary), #00a86b);
-  display: flex;
-  align-items: center;
-  justify-content: center;
   box-shadow: 0 4px 12px rgba(0,105,71,.35);
-}
-.logo-letter {
-  font-family: 'DM Mono', monospace;
-  font-weight: 700;
-  font-size: 18px;
-  color: #fff;
+  object-fit: contain;
 }
 .logo-text {
   font-size: 20px;
