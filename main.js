@@ -145,22 +145,39 @@ updateDownloadUI();
 
 // ---- Download button: link to APK / Play Store ----
 const PLAY_STORE_URL = '#'; // Ganti dengan link Google Play Store kamu
-const APK_URL        = 'finflow.apk'; // APK langsung dari repo
 
 document.getElementById('androidBtn').href = PLAY_STORE_URL;
 
-// APK button – trigger download dengan nama file yang jelas
+// APK button – trigger download dari GitHub Releases secara otomatis
 const apkBtn = document.getElementById('apkBtn');
-apkBtn.href     = APK_URL;
-apkBtn.download = 'FinFlow.apk'; // nama file saat didownload
-apkBtn.addEventListener('click', () => {
-  // Increment download counter
-  currentDownloads += 1; // Simulate 1 download per click
-  localStorage.setItem('finflow_downloads_count', currentDownloads);
-  updateDownloadUI();
-
-  // Tampilkan toast notifikasi saat download dimulai
-  showToast('⬇️ Downloading FinFlow.apk...');
+apkBtn.addEventListener('click', async (e) => {
+  e.preventDefault(); // Mencegah reload halaman
+  
+  // Tampilkan toast notifikasi
+  showToast('⬇️ Mempersiapkan download APK dari GitHub Release...');
+  
+  try {
+    const response = await fetch('https://api.github.com/repos/muzafin/web_finflow/releases/latest');
+    const data = await response.json();
+    
+    if (data && data.assets && data.assets.length > 0) {
+      // Ambil URL file APK pertama yang ada di Release terbaru
+      const downloadUrl = data.assets[0].browser_download_url;
+      
+      // Increment download counter
+      currentDownloads += 1;
+      localStorage.setItem('finflow_downloads_count', currentDownloads);
+      updateDownloadUI();
+      
+      // Arahkan browser ke link download asli
+      window.location.href = downloadUrl;
+      showToast('✅ Download dimulai!');
+    } else {
+      showToast('❌ Gagal menemukan file APK di Release.');
+    }
+  } catch (error) {
+    showToast('❌ Terjadi kesalahan saat mengambil link APK.');
+  }
 });
 
 // ---- Animated counter for stats ----
